@@ -1,1 +1,17 @@
+# Requsitos Práctica.
 
+1. Cabecera general con Logo, título y menú hamburguesa para mostrar un offcanvas de UIKit. (Done)
+2. Listado de cards paginados usando la librería UIKit con cards , pagination y offcanvas-nav entre otros posibiles como badge para indicar la puntuación de la película. Opción de usar otra librería. (Done)
+    2.1. Listar Cards. (Done)
+    2.2. Pagination (Done)
+    2.3. Badge Puntuación de película. (Done)
+    2.4. Ajustes en un modal llamado desde el offcanvas. (Done)
+3. El JSON se consumirá por Fetch API por completo desde un repositorio en Internet como Github o Drive. (TODO)
+    3.1. Usar fetch (Done)
+    3.2. Subir a github (TODO)
+4. Gráfica de barras con el eje X los años y el eje Y la media de dinero ganado ("gross") a la que se accede desde el offcanvas (Apache echarts). (Done)
+    4.1. Gráfica de barra Años/Dinero Ganado (Done)
+5. Gráfica de tarta con el número de películas por año, accesible desde el offcanvas (Apache echarts). (Done)
+    5.1. Gráfica de tarta películas/año (Done)
+6. Aplicar técnicas de accesibilidad y pasarle test (Wave, Web accesibility tool, Chrome Lighthouse accesibility) (TODO)
+    6.1. Pasar tests de accesibilidad. (TODO)

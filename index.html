@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evaluación 2 23-24</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/uikit.min.css">
+    <script src="js/uikit.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+  </head>
+  <body>
+
+    <!-- Navbar -->
+    <nav class="uk-navbar-container uk-margin">
+      <div class="uk-container uk-dark">
+        <div uk-navbar>
+          <div class="uk-navbar-left">
+            <a class="uk-navbar-toggle" uk-navbar-toggle-icon href="#" uk-toggle="target: #nav-offcanvas"></a>
+            <a class="uk-navbar-item uk-logo" href="#"><img src="res/imdb_logo.png" width="70px"></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Offcanvas -->
+    <div id="nav-offcanvas" uk-offcanvas>
+      <div class="uk-offcanvas-bar">
+        <button class="uk-offcanvas-close" type="button" uk-close></button>
+        <h3>Menú</h3>
+        <ul class="uk-nav uk-nav-default">
+          <li class="uk-active"><a href="#"><span class="uk-margin-small-right" uk-icon="icon: home"></span>Home</a></li>
+          <li><a uk-toggle="target: #statsModal"><span class="uk-margin-small-right" uk-icon="icon: rss"></span> Estadísticas</a></li>
+          <li><a uk-toggle="target: #settingsModal"><span class="uk-margin-small-right" uk-icon="icon: settings"></span> Ajustes</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Modal Ajustes -->
+    <div id="settingsModal" uk-modal>
+      <div class="uk-modal-dialog uk-modal-body">
+          <h2 class="uk-modal-title">Ajustes</h2>
+          <div>
+            <label for="maxMovies" class="uk-form-label">Películas por página: </label>
+            <div class="uk-form-controls">
+              <input type="number" name="maxMovies" id="maxmovies" class="uk-input" min="0" max="1000">
+            </div>
+          </div>
+          <p class="uk-text-right">
+            <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+            <button class="uk-button uk-button-primary" type="button" id="saveSettingsBtn">Save</button>
+          </p>
+      </div>
+    </div>
+
+    <!-- Modal Estadísticas -->
+    <div id="statsModal" class="uk-modal-container" uk-modal>
+      <div class="uk-modal-dialog uk-modal-body">
+          <h2 class="uk-modal-title">Estadísticas</h2>
+          <div class="uk-flex uk-flex-center" style="width: 100%;">
+            <div id="grossChartMain"></div>
+          </div>
+          <div class="uk-flex uk-flex-center" style="width: 100%;">
+            <div id="movieYearsChartMain"></div>
+          </div>
+          <p class="uk-text-right">
+            <button class="uk-button uk-button-default uk-modal-close" type="button">Cerrar</button>
+          </p>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="mainContent">
+      
+    </div>
+
+    <!-- Pagination -->
+    <div id="paginationContainer" style="width: 100%; display: flex; justify-content: center;">
+      <ul class="uk-pagination" uk-margin>
+      </ul>
+    </div>
+    
+    <script src="js/main.js" type="text/javascript"></script>
+    <script src="js/charts.js" type="text/javascript"></script>
+  </body>
+</html>
